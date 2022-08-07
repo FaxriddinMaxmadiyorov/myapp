@@ -1,0 +1,18 @@
+<%= form_with(model: [:admin, project]) do |form| %>
+
+  <%= render 'admin/shared/error', model: project %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
